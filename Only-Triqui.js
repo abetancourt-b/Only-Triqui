@@ -90,16 +90,37 @@ function mousePressed() {
 function revisarSiGano() {
   let jugador = turno
   
-  if (matriz[0][0] === jugador && matriz[0][1] === jugador && matriz[0][2] === jugador) { ganar(); }
-  if (matriz[1][0] === jugador && matriz[1][1] === jugador && matriz[1][2] === jugador) { ganar(); }
-  if (matriz[2][0] === jugador && matriz[2][1] === jugador && matriz[2][2] === jugador) { ganar(); }
+  if (matriz[0][0] === jugador && matriz[0][1] === jugador && matriz[0][2] === jugador) { 
+    ganar(); 
+  }
   
-  //columnas
-  if (matriz[0][0] === jugador && matriz[1][0] === jugador && matriz[2][0] === jugador) { ganar(); }
-  if (matriz[0][1] === jugador && matriz[1][1] === jugador && matriz[2][1] === jugador) { ganar(); }
-  if (matriz[0][2] === jugador && matriz[1][2] === jugador && matriz[2][2] === jugador) { ganar(); }
-  if (matriz[0][0] === jugador && matriz[1][1] === jugador && matriz[2][2] === jugador) { ganar(); }
-  if (matriz[2][0] === jugador && matriz[1][1] === jugador && matriz[0][2] === jugador) { ganar(); }
+  if (matriz[1][0] === jugador && matriz[1][1] === jugador && matriz[1][2] === jugador) { 
+    ganar(); 
+  }
+  
+  if (matriz[2][0] === jugador && matriz[2][1] === jugador && matriz[2][2] === jugador) { 
+    ganar();
+  }
+
+  if (matriz[0][0] === jugador && matriz[1][0] === jugador && matriz[2][0] === jugador) { 
+    ganar(); 
+  }
+  
+  if (matriz[0][1] === jugador && matriz[1][1] === jugador && matriz[2][1] === jugador) { 
+    ganar(); 
+  }
+  
+  if (matriz[0][2] === jugador && matriz[1][2] === jugador && matriz[2][2] === jugador) { 
+    ganar(); 
+  }
+  
+  if (matriz[0][0] === jugador && matriz[1][1] === jugador && matriz[2][2] === jugador) {
+    ganar();
+  }
+  
+  if (matriz[2][0] === jugador && matriz[1][1] === jugador && matriz[0][2] === jugador) {
+    ganar();
+  }
 }
 
 function ganar() {
